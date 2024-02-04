@@ -37,5 +37,16 @@ def search_for_artist(token, artist_name):
     json_result = json.loads(result.content)
     print(json_result)
 
+def search_for_album(token, album_name):
+    url = "https://api.spotify.com/v1/search"
+    headers = get_auth_header(token)
+    query = f"?q={album_name}&type=album"
+    query_url = url + query
+    result = get(query_url, headers=headers)
+    json_result = json.loads(result.content)
+    print(json_result)
+
+
 token = get_token()
-search_for_artist(token, "Michael Jackson")
+#search_for_artist(token, "Michael Jackson")
+search_for_artist(token, "It Was Written")
