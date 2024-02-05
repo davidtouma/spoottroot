@@ -49,4 +49,4 @@ def search_for_album(token, album_name):
 
 token = get_token()
 #search_for_artist(token, "Michael Jackson")
-search_for_artist(token, "It Was Written")
+search_for_album(token, "It Was Written")
